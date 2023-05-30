@@ -1,10 +1,9 @@
-#nav-bar{
-    position: sticky;
-    top: 0;
-    z-index: 10;
+*{
+    margin: 0;
+    padding: 0;
 }
 .navbar{
-    background-image: linear-gradient(to right, #000000, #ffffff);
+    background-image: linear-gradient(to right, #000000, #8a0583);
 }
 .navbar-nav li a{
     padding: 3px 10px;
@@ -16,10 +15,12 @@
 .navbar-brand{
     color: white;
     font-family: "Comic Sans MS";
+
 }
 .navbar-toggler{
     outline: none !important;
 }
+
 .navbar-nav li{
     padding: 15px;
 
@@ -27,6 +28,32 @@
 .navbar-nav li a:focus{
     color: #f5bc42;
 
+}
+/* ----------------dashboard---------------*/
+
+#banner{
+    background-image: linear-gradient(to right, #000000, #8a0583);
+    color: white;
+    padding-top: 5%;
+}
+.title{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100px;
+    color: #ffc720;
+}
+.bottom{
+    width: 100%;
+}
+.logo{
+    alignment: center;
+}
+.des{
+    font-family: Bahnschrift;
+}
+.cart{
+    font-family: "Comic Sans MS";
+    color: #ffffff;
 }
 
 
