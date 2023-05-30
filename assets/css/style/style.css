@@ -1,0 +1,32 @@
+#nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar{
+    background-image: linear-gradient(to right, #000000, #ffffff);
+}
+.navbar-nav li a{
+    padding: 3px 10px;
+    color: white;
+    font-weight: 600;
+    float: left;
+    text-align: left;
+}
+.navbar-brand{
+    color: white;
+    font-family: "Comic Sans MS";
+}
+.navbar-toggler{
+    outline: none !important;
+}
+.navbar-nav li{
+    padding: 15px;
+
+}
+.navbar-nav li a:focus{
+    color: #f5bc42;
+
+}
+
+
