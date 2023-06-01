@@ -5,7 +5,7 @@
 .navbar{
     background-image: linear-gradient(to right, #000000, #8a0583);
 }
-.navbar-nav li a{
+.navbar-nav li button{
     padding: 3px 10px;
     color: white;
     font-weight: 600;
@@ -25,7 +25,7 @@
     padding: 15px;
 
 }
-.navbar-nav li a:focus{
+.navbar-nav li button:focus{
     color: #f5bc42;
 
 }

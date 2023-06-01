@@ -32,26 +32,19 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav m-lg-auto">
-                    <li class="nav-item  ">
-                        <a class="nav-link "  href="#">
-                            Home
-                        </a>
+                    <li class="nav-item text-white mx-1 my-2">
+                        <button type="button" class="btn btn-link" id="btnPlaceorderForm" style="color: white">Place Order</button>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#">
-                            Customers
-                        </a>
+                    <li class="nav-item text-white mx-1 my-2">
+                        <button type="button" class="btn btn-link" id="btnOrderDetailsForm" style="color: white">Order Details</button>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#">
-                            Stocks
-                        </a>
+                    <li class="nav-item text-white mx-1 my-2">
+                        <button type="button" class="btn btn-link" id="btnCustomerForm" style="color: white">Customer</button>
                     </li>
-                    <li class="nav-item  ">
-                        <a class="nav-link" href="#">
-                            Place Order
-                        </a>
+                    <li class="nav-item text-white mx-1 my-2">
+                        <button type="button" class="btn btn-link" id="btnItemForm" style="color: white">Item</button>
                     </li>
+
                 </ul>
             </div>
             <div class="navbar-nav" id="buttons-set">
@@ -86,5 +79,538 @@
     </div>
     <img src="assets/images/wave1.png" class="bottom">
 </section>
+
+<!--Customer Form-->
+<div class="card my-2 mx-2" id="customerForm" style="display: none;">
+    <div class="card-header text-dark" style="font-size: 25px; background-color: #848684">
+        Customer Manage
+    </div>
+    <div class="card-body text-dark" style="background-color: #a5a8a6">
+        <div class="row">
+            <!-- Button trigger add customer modal -->
+            <button type="button" class="btn btn-primary my-1 col-sm-12 col-md-8 mx-md-2 col-lg-2 mx-lg-1" data-bs-toggle="modal" data-bs-target="#exampleModal">+ Add</button>
+            <!-- Button trigger update customer modal -->
+            <button type="button" class="btn btn-secondary my-1 col-sm-12 col-md-8 mx-md-2 col-lg-2 mx-lg-1" data-bs-toggle="modal" data-bs-target="#customerUpdateModal">! Update</button>
+            <!-- Button trigger Remove customer modal -->
+            <button type="button" class="btn btn-danger my-1 col-sm-12 col-md-8 mx-md-2 col-lg-2 mx-lg-1" data-bs-toggle="modal" data-bs-target="#customerRemoveModal">- Remove</button>
+        </div>
+        <div class="row">
+            <!-- Search Customer -->
+            <form class="my-4 col-sm-12 col-md-8 col-lg-6" role="search" >
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+        <!--customer view table -->
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">NIC</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Tell</th>
+                    <th scope="col">Address</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!--add rows to customer view table-->
+                <tr>
+                    <th scope="row">200133702832</th>
+                    <td>Kaligu</td>
+                    <td>0767095344</td>
+                    <td>Horana</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- add cutomer Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Add a new Customer</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!--add customer form-->
+                <form>
+                    <div class="mb-3">
+                        <label for="customerAddNIC" class="form-label">NIC </label>
+                        <input type="text" class="form-control" id="customerAddNIC">
+                    </div>
+                    <div class="mb-3">
+                        <label for="customerAddName" class="form-label">Name </label>
+                        <input type="number" class="form-control" id="customerAddName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="customerAddTell" class="form-label">Tell </label>
+                        <input type="number" class="form-control" id="customerAddTell">
+                    </div>
+                    <div class="mb-3">
+                        <label for="customerAddAddress" class="form-label">Address </label>
+                        <input type="text" class="form-control" id="customerAddAddress">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Remove cutomer Modal -->
+<div class="modal fade" id="customerRemoveModal" tabindex="-1" aria-labelledby="customerRemoveModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="customerRemoveModalLabel">Remove existing Customer</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!--Remove customer form-->
+                <form>
+                    <div class="mb-3">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                    </div>
+                    <div class="mb-3">
+                        <label for="customerRemoveNIC" class="form-label">NIC </label>
+                        <input type="text" class="form-control" id="customerRemoveNIC">
+                    </div>
+                    <div class="mb-3">
+                        <label for="customerRemoveName" class="form-label">Name </label>
+                        <input type="number" class="form-control" id="customerRemoveName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="customerRemoveTell" class="form-label">Tell </label>
+                        <input type="number" class="form-control" id="customerRemoveTell">
+                    </div>
+                    <div class="mb-3">
+                        <label for="customerRemoveAddress" class="form-label">Address </label>
+                        <input type="text" class="form-control" id="customerRemoveAddress">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Remove</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Update cutomer Modal -->
+<div class="modal fade" id="customerUpdateModal" tabindex="-1" aria-labelledby="customerUpdateModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="customerUpdateModalLabel">Update existing Customer</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!--Update customer form-->
+                <form>
+                    <div class="mb-3">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                    </div>
+                    <div class="mb-3">
+                        <label for="customerUpdateNIC" class="form-label">NIC </label>
+                        <input type="text" class="form-control" id="customerUpdateNIC">
+                    </div>
+                    <div class="mb-3">
+                        <label for="customerUpdateName" class="form-label">Name </label>
+                        <input type="number" class="form-control" id="customerUpdateName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="customerUpdateTell" class="form-label">Tell </label>
+                        <input type="number" class="form-control" id="customerUpdateTell">
+                    </div>
+                    <div class="mb-3">
+                        <label for="customerUpdateAddress" class="form-label">Address </label>
+                        <input type="text" class="form-control" id="customerUpdateAddress">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Update Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--Item Form-->
+<div class="card my-2 mx-2" id="itemForm" style="display: none;">
+    <div class="card-header text-dark" style="font-size: 25px; background-color: #848684">
+        Item Manage
+    </div>
+    <div class="card-body text-dark" style="background-color: #a5a8a6">
+        <div class="row">
+            <!-- Button trigger add item modal -->
+            <button type="button" class="btn btn-primary my-1 col-sm-12 col-md-8 mx-md-2 col-lg-2 mx-lg-1" data-bs-toggle="modal" data-bs-target="#itemAddModal">+ Add</button>
+            <!-- Button trigger update item modal -->
+            <button type="button" class="btn btn-secondary my-1 col-sm-12 col-md-8 mx-md-2 col-lg-2 mx-lg-1" data-bs-toggle="modal" data-bs-target="#itemUpdateModal">! Update</button>
+            <!-- Button trigger Remove item modal -->
+            <button type="button" class="btn btn-danger my-1 col-sm-12 col-md-8 mx-md-2 col-lg-2 mx-lg-1" data-bs-toggle="modal" data-bs-target="#itemRemoveModal">- Remove</button>
+        </div>
+        <div class="row">
+            <!-- Search Item -->
+            <form class="my-4 col-sm-12 col-md-8 col-lg-6" role="search" >
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+        <!--item view table -->
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Code</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">QTY</th>
+                    <th scope="col">Unit Price</th>
+                </tr>
+                </thead>
+                <tbody id="viewAllTableBody">
+                <!--add rows to customer view table-->
+                <!--        <tr>-->
+                <!--          <td>1001</td>-->
+                <!--          <td>Carrot</td>-->
+                <!--          <td>1kg</td>-->
+                <!--          <td>500</td>-->
+                <!--        </tr>-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- add cutomer Modal -->
+<div class="modal fade" id="itemAddModal" tabindex="-1" aria-labelledby="itemAddModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="itemAddModalLabel">Add a new Item</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!--add item form-->
+                <form>
+                    <div class="mb-3">
+                        <label for="itemAddCode" class="form-label">Code </label>
+                        <input type="text" class="form-control" id="itemAddCode">
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemAddDescription" class="form-label">Description </label>
+                        <input type="text" class="form-control" id="itemAddDescription">
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemAddQTY" class="form-label">QTY </label>
+                        <input type="number" class="form-control" id="itemAddQTY">
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemAddUnitPrice" class="form-label">Unit Price </label>
+                        <input type="number" class="form-control" id="itemAddUnitPrice">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="itemAddbtnSave" type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Remove item Modal -->
+<div class="modal fade" id="itemRemoveModal" tabindex="-1" aria-labelledby="itemRemoveModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="itemRemoveModalLabel">Remove existing Item</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!--Remove item form-->
+                <form>
+                    <div class="mb-3">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemRemoveCode" class="form-label">Code </label>
+                        <input type="text" class="form-control" id="itemRemoveCode">
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemRemoveDescription" class="form-label">Description </label>
+                        <input type="text" class="form-control" id="itemRemoveDescription">
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemRemoveQTY" class="form-label">QTY </label>
+                        <input type="number" class="form-control" id="itemRemoveQTY">
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemRemoveUnitPrice" class="form-label">Unit Price </label>
+                        <input type="number" class="form-control" id="itemRemoveUnitPrice">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Remove</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Update item Modal -->
+<div class="modal fade" id="itemUpdateModal" tabindex="-1" aria-labelledby="itemUpdateModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="itemUpdateModalLabel">Update existing Item</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!--Update item form-->
+                <form>
+                    <div class="mb-3">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemUpdateCode" class="form-label">Code </label>
+                        <input type="text" class="form-control" id="itemUpdateCode">
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemUpdateDescription" class="form-label">Description </label>
+                        <input type="number" class="form-control" id="itemUpdateDescription">
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemUpdateQTY" class="form-label">QTY </label>
+                        <input type="number" class="form-control" id="itemUpdateQTY">
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemUpdateUnitPrice" class="form-label">UnitPrice</label>
+                        <input type="number" class="form-control" id="itemUpdateUnitPrice">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Update Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Place Order Form-->
+<div class="card my-2 mx-2" id="placeOrderForm" style="display: none;">
+    <div class="card-header text-dark " style="font-size: 25px; background-color: #848684">
+        Place Order
+    </div>
+    <div class="card-body text-dark" style="background-color: #a5a8a6">
+        <div class="row">
+            <div class="containermy-2 col-md-6 col-lg-5 my-2 mx-lg-4">
+                <div class="row" style="background-color:rgba(109,140,162,0.91)">
+                    <label class="form-label fw-bold text-white my-2">Select Item</label>
+                    <div class="card my-2 mx-2 " style="width: 100px; height: 100px">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            ...
+                        </div>
+                    </div>
+                    <div class="card my-2 mx-2" style="width: 100px; height: 100px">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            ...
+                        </div>
+                    </div>
+                    <div class="card my-2 mx-2" style="width: 100px; height: 100px">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            ...
+                        </div>
+                    </div>
+                    <div class="card my-2 mx-2" style="width: 100px; height: 100px">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            ...
+                        </div>
+                    </div>
+                    <div class="card my-2 mx-2" style="width: 100px; height: 100px">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            ...
+                        </div>
+                    </div>
+                    <div class="card my-2 mx-2" style="width: 100px; height: 100px">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            ...
+                        </div>
+                    </div>
+                    <div class="card my-2 mx-2" style="width: 100px; height: 100px">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            ...
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="container  col-lg-6 col-lg-4 my-2 mx-lg-4" style="background-color: rgba(113,147,153,0.91)">
+                <div class="mb-3 my-1">
+                    <div class="row">
+                        <div class="col-9">
+                            <label for="exampleFormControlInput1" class="form-label fw-bold text-white">Select Customer</label>
+                        </div>
+                        <div class="col-3">
+                            <label class="form-label fs-6">Order ID - </label>
+                            <label class="form-label fs-6">O001</label>
+                        </div>
+                    </div>
+
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Search Customer...Type NIC...">
+                    <button type="button" class="btn my-2 mx-1 text-white" style="background-color: rgba(42,57,42,0.91)">*Tempory Customer</button>
+                    <button type="button" class="btn bg-dark my-2 mx-1 text-white">+New Customer</button>
+                    <p class="fst-normal d-lg-inline-block d-md-inline-block mx-3 ms-md-0  mx-lg-0 my-0">Customer :- <p class="fst-italic d-lg-inline-block d-md-inline-block mx-3 ms-md-0 mx-lg-1 my0">00000000000</p></p>
+                </div>
+                <div class="mb-3 my-2">
+                    <label class="form-label fw-bold text-white">Cart List</label>
+                    <!--item view table -->
+                    <div class="table-responsive">
+                        <table class="table ">
+                            <thead>
+                            <tr>
+                                <th scope="col">Code</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">QTY</th>
+                                <th scope="col">Per Unit</th>
+                                <th scope="col">Units</th>
+                                <th scope="col">Units Price</th>
+                                <th scope="col"> - </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!--add rows to customer view table-->
+                            <tr>
+                                <th scope="row">i001</th>
+                                <td>Carrot</td>
+                                <td>1kg</td>
+                                <td>500</td>
+                                <td><input type="number" class="form-control" id="entercartUnits" value="2"></td>
+                                <td>1000</td>
+                                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16" id="trashCartListitem">
+                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
+                                    <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+                                </svg></i></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="mb-3 my-4" style="background-color:#a5c3c7">
+                    <div class="row mx-2">
+                        <div class="col-4">
+                            <p class="fw-medium">Total Items</p>
+                        </div>
+                        <div class="col-4">
+                            <p class="fw-normal">2</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2">
+                        <div class="col-4">
+                            <p class="fw-bolder">Total Price</p>
+                        </div>
+                        <div class="col-4">
+                            <p class="fw-bolder fs-2">1000</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2">
+                        <div class="col-4">
+                            <p class="fw-bold">Cash</p>
+                        </div>
+                        <div class="col-4">
+                            <input type="number" class="form-control" id="entercartCashPayment" value="2">
+                        </div>
+                    </div>
+                    <div class="row mx-2">
+                        <div class="col-4">
+                            <p class="fw-bolder">Balance</p>
+                        </div>
+                        <div class="col-4">
+                            <p class="fw-bold fs-5">0</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 my-2">
+                        <button type="button" class="btn btn-primary w-50" style="margin-bottom: 5px">Paid</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!--Order Detail Form-->
+<div class="card my-2 mx-2" id="OrderDetailsForm" style="display: none;">
+    <div class="card-header text-dark" style="font-size: 25px; background-color: #848684">
+        Order Details View
+    </div>
+    <div class="card-body text-dark" style="background-color: #a5a8a6">
+        <div class="row">
+            <!-- Search Customer -->
+            <form class="my-4 col-sm-12 col-md-8 col-lg-6" role="search" >
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+        <!--customer view table -->
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Customer ID</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Description</th>
+                    <th scope="col">Item Qty</th>
+                    <th scope="col">Item Per Unit Price</th>
+                    <th scope="col">Ordered Units</th>
+                    <th scope="col">Ordered Units Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!--add rows to customer view table-->
+                <tr>
+                    <td>O001</td>
+                    <td>200133702832</td>
+                    <td>Kaligu</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<script src="./assets/js/jquery-3.6.4.min.js"></script>
+
+<script src="./assets/js/script.js"></script>
 </body>
 </html>
