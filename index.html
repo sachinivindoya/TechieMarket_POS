@@ -49,5 +49,63 @@
     </div>
 </div>
 
+<!--Customer Form-->
+
+<div class="container-fluid mt-5" id="customerform">
+    <h1 class="mx-3">Customer Form</h1>
+    <div class="row mt-3 p-3">
+        <div class="col-xl-4 col-lg-6">
+            <div class="bg-white card">
+                <div class="bg-dark card-header text-white" style="font-size: 25px">
+                    Customer Details
+                </div>
+                <div class="card-body bg-white text-dark">
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-6">
+                            <lable>Customer ID:</lable>
+                            <input type="text" id="txtCustomerId0" class="form-control">
+                            <span class="control-error" id="lblcusid"></span>
+                        </div>
+                        <div class="form-group col-6">
+                            <lable>Customer Name:</lable>
+                            <input type="text" id="txtCustomerName0" class="form-control">
+                            <span class="control-error" id="lblcusname"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-12">
+                            <lable>Customer Address:</lable>
+                            <input type="text" id="txtCustomerAddress0" class="form-control">
+                            <span class="control-error" id="lblcusaddress"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-12">
+                            <button type="button" class="btn btn-outline-success fw-bold" id="btnCustomerAdd">Add</button>
+                            <button type="button" class="btn btn-outline-warning fw-bold" id="btnCustomerUpdate">UPDATE</button>
+                            <button type="button" class="btn btn-outline-danger fw-bold" id="btnCustomerDelete">DELETE</button>
+                            <button type="button" class="btn btn-danger fw-bold" id="btnCustomerCancel">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8 col-lg-6">
+            <table class="table table-hover border mt-3 p-3">
+                <thead class="bg-secondary" >
+                <tr>
+                    <th scope="col">Customer ID</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Customer Address</th>
+                </tr>
+                </thead>
+                <tbody class="bg-secondary text-white" id="tblCustomer">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>
