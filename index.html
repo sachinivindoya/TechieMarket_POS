@@ -107,5 +107,71 @@
 </div>
 
 
+<!--Item Form-->
+
+<div class="container-fluid mt-5 " id="itemform">
+    <h1 class="mx-3">Item Form</h1>
+    <div class="row mt-3 p-3">
+        <div class="col-xl-4 col-lg-6">
+            <div class="bg-white card">
+                <div class="bg-dark card-header text-white" style="font-size: 25px">
+                    Item Details
+                </div>
+                <div class="card-body bg-white text-dark">
+                    <div class="row p-2 mt-3 ">
+                        <div class="form-group col-6">
+                            <lable>Item Code:</lable>
+                            <input type="text" id="txtItemCode0" class="form-control">
+                            <span class="control-error" id="lblitemcode"></span>
+                        </div>
+                        <div class="form-group col-6">
+                            <lable>Item Description:</lable>
+                            <input type="text" id="txtDescription0" class="form-control">
+                            <span class="control-error" id="lbldescription"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-12">
+                            <lable>Quantity:</lable>
+                            <input type="text" id="txtQty0" class="form-control">
+                            <span class="control-error" id="lblqty"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-12">
+                            <lable>Unit Price:</lable>
+                            <input type="text" id="txtUnitPrice0" class="form-control">
+                            <span class="control-error" id="lblprice"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-12">
+                            <button type="button" class="btn btn-outline-success fw-bold" id="btnItemAdd">Add</button>
+                            <button type="button" class="btn btn-outline-warning fw-bold" id="btnItemUpdate">UPDATE</button>
+                            <button type="button" class="btn btn-outline-danger fw-bold" id="btnItemDelete">DELETE</button>
+                            <button type="button" class="btn btn-danger fw-bold" id="btnItemCancel">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8 col-lg-6">
+            <table class="table table-hover border mt-3 p-3 ">
+                <thead class="bg-secondary">
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Qty On Hand</th>
+                    <th scope="col">Unit Price</th>
+                </tr>
+                </thead>
+                <tbody class="bg-secondary text-white" id="tblItem">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>
