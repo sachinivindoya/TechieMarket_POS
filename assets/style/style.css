@@ -1,0 +1,13 @@
+body{
+    background-image: linear-gradient(to right,#25043d, #ffffff);
+}
+
+
+
+.navbar navbar-expand-lg navbar-light{
+    background-image: linear-gradient(to right, #25043d, #ffffff);
+}
+
+.navbar-brand{
+    color: white;
+}
