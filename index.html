@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="" xmlns="" xmlns="">
 <head>
     <meta charset="UTF-8">
-    <title>POS-Techie Market</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="assets/images/image-removebg-preview.png" alt="logo" >
+    <meta name="author" content="Sachini ">
+    <meta name="description" content=" POS system">
+    <title>Techie Market | POS </title>
     <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+
 </head>
 <!-- nav bar -->
 <nav class="navbar navbar-expand-lg navbar-light">
@@ -91,6 +95,13 @@
                     </div>
                     <div class="row p-2 mt-3">
                         <div class="form-group col-12">
+                            <lable>Customer Salary:</lable>
+                            <input type="text" id="txtCustomerSalary0" class="form-control">
+                            <span class="control-error" id="lblcussalary"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-12">
                             <button type="button" class="btn btn-outline-success fw-bold" id="btnCustomerAdd">Add</button>
                             <button type="button" class="btn btn-outline-warning fw-bold" id="btnCustomerUpdate">UPDATE</button>
                             <button type="button" class="btn btn-outline-danger fw-bold" id="btnCustomerDelete">DELETE</button>
@@ -107,9 +118,10 @@
                     <th scope="col">Customer ID</th>
                     <th scope="col">Customer Name</th>
                     <th scope="col">Customer Address</th>
+                    <th scope="col">Customer Salary</th>
                 </tr>
                 </thead>
-                <tbody class="bg-secondary text-white" id="tblCustomer">
+                <tbody class=" text-white" id="tblCustomer">
                 </tbody>
             </table>
         </div>
@@ -175,7 +187,7 @@
                     <th scope="col">Unit Price</th>
                 </tr>
                 </thead>
-                <tbody class="bg-secondary text-white" id="tblItem">
+                <tbody class=" text-white" id="tblItem">
                 </tbody>
             </table>
         </div>
@@ -370,11 +382,11 @@
         <tbody class="bg-secondary text-black" id="tblCart"></tbody>
     </table>
 </div>
-<script src="assets/js/jquery-3.6.4.min.js"></script>
+
 <script src="assets/js/jquery-3.6.0.js"></script>
 <script src="assets/bootstrap/css/bootstrap.min.css"></script>
-<script src="controller/MainController.js"></script>
-<script src="db/memory.js"></script>
+<script src="controllers/MainController.js"></script>
+<script src="db/Database.js"></script>
 <script src="controllers/CustomerController.js"></script>
 <script src="controllers/ItemController.js"></script>
 <script src="model/CustomerDTO.js"></script>
