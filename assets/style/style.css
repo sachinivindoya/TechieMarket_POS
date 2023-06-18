@@ -1,11 +1,11 @@
 body{
-    background-image: linear-gradient(to right,#25043d, #ffffff);
+    background-image: linear-gradient(to right,#25043d, #6610f2);
 }
 
 
 
 .navbar navbar-expand-lg navbar-light{
-    background-image: linear-gradient(to right, #25043d, #ffffff);
+    background-image: linear-gradient(to right, #25043d, #6610f2);
 }
 
 .navbar-brand{
