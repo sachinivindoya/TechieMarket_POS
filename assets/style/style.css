@@ -20,3 +20,21 @@ p{
 .bg-secondary{
     color: white;
 }
+.title{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100px;
+    color: #ffc720;
+}
+
+.logo{
+    alignment: center;
+}
+.des{
+    font-family: Bahnschrift;
+}
+.cart{
+    font-family: "Comic Sans MS";
+    color: #ffffff;
+    font-size: 30px;
+}

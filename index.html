@@ -10,7 +10,7 @@
 <!-- nav bar -->
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid ">
-        <a class="navbar-brand " href="#" id="btnDashboard">
+        <a class="navbar-brand text-white" href="#" id="btnDashboard">
             <!-- logo -->
             <img src="assets/images/image-removebg-preview.png" height="40">
             Techie Market </a>
@@ -35,18 +35,29 @@
     </div>
 </nav>
 <div class="container-fluid mt-5 " id="dashboardform">
-    <div class="row justify-content-around">
-        <P class="des">
-            Welcome to Techie Market, <br>your one-stop destination for all your computing needs!
-            We are delighted to offer you a world of cutting-edge technology, exceptional customer service,
-            and a wide range of products that will empower and enhance your digital experience.
-        </P>
-        <br>
-        <p class="cart">
-            <img src="assets/images/images-removebg-preview.png" width="30">
-            Shop Now !
-        </p>
+    <!--  ---------Dashboard---------------->
+    <div class="row">
+        <div class="col-md-6">
+            <p class="title">
+                BEST DIGITAL DESTINATION
+            </p>
+            <P class="des">
+                Welcome to Techie Market, <br>your one-stop destination for all your computing needs!
+                We are delighted to offer you a world of cutting-edge technology, exceptional customer service,
+                and a wide range of products that will empower and enhance your digital experience.
+            </P>
+            <br>
+            <p class="cart">
+                <img src="assets/images/images-removebg-preview.png" width="30">
+                Shop Now !
+            </p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="assets/images/network.png" class="logo">
+        </div>
     </div>
+    <img src="assets/images/wave1.png" class="bottom">
+</div>
 </div>
 
 <!--Customer Form-->
@@ -360,7 +371,18 @@
         <tbody class="bg-secondary text-black" id="tblCart"></tbody>
     </table>
 </div>
-
+<script src="assets/js/jquery-3.6.4.min.js"></script>
+<script src="assets/js/jquery-3.6.0.js"></script>
+<script src="assets/boostrap/css/bootstrap.min.css"></script>
+<script src="controllers/MainController.js"></script>
+<script src="db/memory.js"></script>
+<script src="controllers/CustomerController.js"></script>
+<script src="controllers/ItemController.js"></script>
+<script src="model/CustomerDTO.js"></script>
+<script src="model/ItemDTO.js"></script>
+<script src="model/OrderDTO.js"></script>
+<script src="controllers/OrderController.js"></script>
+<script src="model/OrderDetails.js"></script>
 
 </body>
 </html>
